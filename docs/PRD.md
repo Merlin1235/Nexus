@@ -70,4 +70,87 @@ The first version of Nexus should allow users to:
 
 ---
 
+# 6. Functional Requirements
+
+## 6.1 User Authentication
+
+The platform shall allow users to:
+
+- Register an account
+- Login securely
+- Reset forgotten passwords
+- Connect Web3 wallets (MetaMask, WalletConnect)
+- Logout securely
+
+---
+
+## 6.2 Project Management
+
+Users shall be able to:
+
+- Create projects
+- Rename projects
+- Delete projects
+- Archive projects
+- View project history
+
+---
+
+## 6.3 Smart Contract Workspace
+
+Users shall be able to:
+
+- Create Solidity files
+- Edit contracts
+- Save contracts
+- Organize multiple files
+- View compiler output
+
+---
+
+## 6.4 Contract Compilation
+
+The system shall:
+
+- Compile Solidity contracts
+- Display compiler warnings
+- Display compilation errors
+- Generate ABI
+- Generate bytecode
+
+---
+
+## 6.5 Deployment
+
+Users shall be able to:
+
+- Deploy contracts
+- Select blockchain network
+- Estimate gas
+- View deployment status
+- Save deployment history
+
+---
+
+## 6.6 Blockchain Explorer
+
+The system shall display:
+
+- Transactions
+- Blocks
+- Contract addresses
+- Gas usage
+- Wallet activity
+
+---
+
+## 6.7 AI Assistant
+
+The assistant shall:
+
+- Explain compiler errors
+- Review smart contracts
+- Suggest optimizations
+- Generate documentation
+- Answer blockchain questions
 # End of Part 1
