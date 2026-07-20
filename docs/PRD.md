@@ -190,5 +190,31 @@ The architecture should support:
 - Mobile responsive
 - Keyboard navigation
 - Dark mode
+
+---
+
+# 8. User Stories
+
+### As a student
+
+I want to learn Solidity inside one platform so that I don't need multiple tools.
+
+---
+
+### As a blockchain developer
+
+I want to deploy smart contracts quickly so I can focus on building products.
+
+---
+
+### As a startup founder
+
+I want to manage all blockchain projects from one dashboard.
+
+---
+
+### As a university instructor
+
+I want students to learn Web3 using one platform.
 # End of Part 1
 
