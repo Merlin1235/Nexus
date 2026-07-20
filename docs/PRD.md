@@ -152,5 +152,43 @@ The assistant shall:
 - Review smart contracts
 - Suggest optimizations
 - Generate documentation
-- Answer blockchain questions
+
+---
+
+# 7. Non-Functional Requirements
+
+## Performance
+
+- Dashboard loads within 2 seconds
+- API responses under 500ms
+- Fast smart contract compilation
+
+## Security
+
+- HTTPS
+- JWT Authentication
+- Encrypted passwords
+- Wallet signature verification
+- Input validation
+
+## Scalability
+
+The architecture should support:
+
+- Thousands of users
+- Multiple blockchain networks
+- Future microservices
+
+## Reliability
+
+- 99.9% uptime target
+- Automatic backups
+- Error logging
+
+## Accessibility
+
+- Mobile responsive
+- Keyboard navigation
+- Dark mode
 # End of Part 1
+
