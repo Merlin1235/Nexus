@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./nexus.png" alt="Nexus Banner">
+  <img src="https://raw.githubusercontent.com/Merlin1235/Nexus/main/nexus.png" alt="Nexus Banner">
 </p>
 
 <h1 align="center">🚀 Nexus</h1>
