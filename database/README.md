@@ -10,10 +10,17 @@ This folder contains the database design and documentation for the Nexus platfor
 - SQL Scripts
 - Prisma Schema
 
-## Status
+## 📊 Progress
 
-- [x] Planning
-- [ ] Database Design
-- [ ] ER Diagram
-- [ ] SQL Implementation
-- [ ] Prisma Schema
+| Task | Status |
+|------|--------|
+| Planning | ✅ Completed |
+| Database Documentation | ✅ Completed |
+| Users Table | ✅ Completed |
+| Projects Table | ✅ Completed |
+| Smart Contracts Table | ✅ Completed |
+| Deployments Table | ✅ Completed |
+| Wallets Table | 🟡 In Progress |
+| ER Diagram | 🟢 Planned |
+| Prisma Schema | 🟢 Planned |
+| SQL Migration | 🟢 Planned |
