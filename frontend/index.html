@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <!-- Meta Information -->
@@ -77,8 +77,7 @@
     <ul class="flex items-center space-x-8">
 
         <li>
-            <a href="#features" class="text-gray-300 hover:text-white transition duration-300">
-                Features
+            <a href="#features">Features</a>
             </a>
         </li>
 
@@ -766,12 +765,12 @@
         </div>
 
         <!-- Statistics Grid -->
-       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
             <!-- Developers -->
             <div
-               <div class="bg-card rounded-2xl p-6 md:p-8 border border-slate-700 text-center hover:border-primary hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+               <div class="bg-card rounded-3xl p-10 border border-slate-700 text-center hover:border-primary hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
 
-                <h3 class="text-5xl font-bold text-primary">
+                <h3 class="text-5xl md:text-6xl font-extrabold text-primary tracking-tight">
                     10K+
                 </h3>
 
@@ -783,9 +782,9 @@
 
             <!-- Projects -->
             <div
-                <div class="bg-card rounded-2xl p-6 md:p-8 border border-slate-700 text-center hover:border-primary hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+                <div class="bg-card rounded-3xl p-10 border border-slate-700 text-center hover:border-primary hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
 
-                <h3 class="text-5xl font-bold text-primary">
+                <h3 class="text-5xl md:text-6xl font-extrabold text-primary tracking-tight">
                     250+
                 </h3>
 
@@ -797,8 +796,9 @@
 
             <!-- Uptime -->
             <div
-                <div class="bg-card rounded-2xl p-6 md:p-8 border border-slate-700 text-center hover:border-primary hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
-                <h3 class="text-5xl font-bold text-primary">
+                <div class="bg-card rounded-3xl p-10 border border-slate-700 text-center hover:border-primary hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
+
+                <h3 class="text-5xl md:text-6xl font-extrabold text-primary tracking-tight">
                     99.9%
                 </h3>
 
@@ -810,8 +810,9 @@
 
             <!-- Support -->
             <div
-                <div class="bg-card rounded-2xl p-6 md:p-8 border border-slate-700 text-center hover:border-primary hover:-translate-y-2 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
-                <h3 class="text-5xl font-bold text-primary">
+                <div class="bg-card rounded-3xl p-10 border border-slate-700 text-center hover:border-primary hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500">
+
+                <h3 class="text-5xl md:text-6xl font-extrabold text-primary tracking-tight">
                     24/7
                 </h3>
 
@@ -830,12 +831,17 @@
         <!-- =========================
      CALL TO ACTION
 ========================== -->
+<!-- Background Glow -->
+<div class="absolute -top-24 -left-24 w-72 h-72 bg-white/10 rounded-full blur-3xl"></div>
+
+<div class="absolute -bottom-24 -right-24 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl"></div>
+
 <section id="call-to-action" class="py-24">
 
     <div class="max-w-5xl mx-auto px-6">
 
         <div
-            class="bg-gradient-to-r from-primary to-blue-700 rounded-3xl p-16 text-center shadow-2xl">
+    class="relative overflow-hidden bg-gradient-to-r from-primary via-blue-600 to-indigo-700 rounded-3xl p-10 md:p-16 text-center shadow-2xl">
 
             <!-- Badge -->
             <div
@@ -846,7 +852,7 @@
             </div>
 
             <!-- Heading -->
-            <h2 class="text-5xl font-bold leading-tight">
+            <h2 class="text-3xl md:text-5xl font-bold leading-tight">
 
                 Start Building With
 
@@ -870,8 +876,7 @@
             </p>
 
             <!-- Buttons -->
-            <div class="mt-10 flex justify-center gap-5">
-
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-5">
                 <a href="register.html"
                     class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:scale-105 transition duration-300">
 
@@ -880,7 +885,7 @@
                 </a>
 
                 <a href="#features"
-                    class="border border-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-primary transition duration-300">
+                    class="border border-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-primary hover:scale-110 transition-all duration-300">
 
                     Explore Features
 
@@ -903,21 +908,17 @@
 
     <div class="max-w-7xl mx-auto px-6">
 
-       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
-           <!-- =========================
-     FOOTER BRAND
-========================== -->
-<div class="text-center lg:text-left">
+          <!-- Footer Brand -->
+<div class="lg:col-span-1">
 
-    <!-- Logo -->
-   <a href="index.html"
-   class="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-3 space-y-3 lg:space-y-0">
+    <a href="index.html" class="flex items-center gap-3">
 
         <img
             src="https://raw.githubusercontent.com/Merlin1235/Nexus/main/Logo.png"
             alt="Nexus Logo"
-            class="h-12 w-auto object-contain">
+            class="h-10 w-auto">
 
         <div>
 
@@ -925,7 +926,7 @@
                 Nexus
             </h2>
 
-            <p class="text-gray-400">
+            <p class="text-gray-400 text-sm">
                 Developer Platform
             </p>
 
@@ -934,7 +935,7 @@
     </a>
 
     <!-- Description -->
-    <p class="mt-6 text-gray-400 leading-8">
+    <p class="mt-5 text-gray-400 leading-7 max-w-sm">
 
         Build smarter, deploy faster, and create modern software
         using AI, Blockchain, Cloud, and next-generation developer
@@ -947,13 +948,13 @@
             <!-- Product -->
             <div class="text-center lg:text-left">
 
-                <h3 class="text-xl font-semibold mb-6">
+                <h3 class="text-lg font-semibold mb-5">
 
                     Product
 
                 </h3>
 
-                <ul class="space-y-4 text-gray-400">
+                <ul class="space-y-3 text-gray-400">
 
                     <li><a href="#features" class="hover:text-white transition">Features</a></li>
 
@@ -970,13 +971,13 @@
             <!-- Company -->
             <div class="text-center lg:text-left">
 
-                <h3 class="text-xl font-semibold mb-6">
+                <h3 class="text-lg font-semibold mb-5">
 
                     Company
 
                 </h3>
 
-                <ul class="space-y-4 text-gray-400">
+                <ul class="space-y-3 text-gray-400">
 
                     <li><a href="#" class="hover:text-white transition">About</a></li>
 
@@ -993,30 +994,30 @@
             <!-- Connect -->
 <div class="text-center lg:text-left">
 
-    <h3 class="text-xl font-semibold mb-6">
+    <h3 class="text-lg font-semibold mb-5">
         Connect
     </h3>
 
-    <ul class="space-y-4 text-gray-400">
+   <ul class="space-y-3 text-gray-400">
 
         <li>
             <a href="https://github.com/Merlin1235"
                target="_blank"
-               class="hover:text-white transition">
+               class="hover:text-primary transition duration-300">
                 GitHub
             </a>
         </li>
 
         <li>
             <a href="mailto:jkala863@gmail.com"
-               class="hover:text-white transition">
+               class="hover:text-primary transition duration-300">
                 📧 jkala863@gmail.com
             </a>
         </li>
 
         <li>
             <a href="tel:+254707598125"
-               class="hover:text-white transition">
+              class="hover:text-primary transition duration-300">
                 📞 +254 707 598 125
             </a>
         </li>
@@ -1031,11 +1032,11 @@
 
 </div>
 
-        </div>
+</div>
+
 
         <!-- Bottom Footer -->
-       <div class="border-t border-slate-800 mt-16 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4 text-center">
-
+      <div class="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <p class="text-gray-500 text-sm">
 
                 © 2026 Nexus. All rights reserved.
