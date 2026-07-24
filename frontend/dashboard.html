@@ -1,1 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Login • Nexus</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<script>
+
+tailwind.config = {
+
+theme: {
+
+extend: {
+
+fontFamily: {
+
+sans: ['Inter','sans-serif']
+
+},
+
+colors: {
+
+primary:'#2563EB',
+
+dark:'#0F172A',
+
+card:'#1E293B'
+
+}
+
+}
+
+}
+
+}
+
+</script>
+
+</head>
+
+<body class="bg-dark text-white font-sans">
+
+<div class="flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside class="hidden lg:flex w-72 bg-card border-r border-slate-700 flex-col">
+
+        <div class="p-6 border-b border-slate-700">
+
+            <div class="flex items-center space-x-3">
+
+                <!-- Logo -->
+        <img
+            src="https://raw.githubusercontent.com/Merlin1235/Nexus/main/Logo.png"
+            alt="Nexus Logo"
+            class="w-24 mb-8">
+                <div>
+
+                    <h1 class="font-bold text-2xl">
+                        Nexus
+                    </h1>
+
+                    <p class="text-gray-400 text-sm">
+                        Developer Platform
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <nav class="flex-1 p-6 space-y-3">
+
+            <a href="#"
+                class="flex items-center px-4 py-3 rounded-xl bg-primary text-white font-medium">
+
+                🏠 Dashboard
+
+            </a>
+
+            <a href="#"
+                class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-700 transition">
+
+                🤖 AI Studio
+
+            </a>
+
+            <a href="#"
+                class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-700 transition">
+
+                ⛓ Blockchain
+
+            </a>
+
+            <a href="#"
+                class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-700 transition">
+
+                ☁ Cloud
+
+            </a>
+
+            <a href="#"
+                class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-700 transition">
+
+                📂 Projects
+
+            </a>
+
+            <a href="#"
+                class="flex items-center px-4 py-3 rounded-xl hover:bg-slate-700 transition">
+
+                ⚙ Settings
+
+            </a>
+
+        </nav>
+
+        <div class="p-6 border-t border-slate-700">
+
+            <button class="w-full bg-red-500 hover:bg-red-600 py-3 rounded-xl font-semibold">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+
+        <!-- Top Navigation -->
+        <header class="h-20 border-b border-slate-700 bg-card flex items-center justify-between px-8">
+
+            <div>
+
+                <h2 class="text-2xl font-bold">
+                    Dashboard
+                </h2>
+
+                <p class="text-gray-400">
+                    Welcome back, Merlin 👋
+                </p>
+
+             </div>
+
+             <div class="flex items-center gap-4">
+
+                  <button class="w-12 h-12 rounded-xl bg-slate-700 flex items-center justify-center hover:bg-slate-600 transition">
+                    🔔
+
+                </button>
+                
+             <img
+                 src="https://i.pravatar.cc/150?img=12"
+                 class="w-12 h-12 rounded-full border-2 border-blue-500">
+
+             </div>
+
+        </header>
+
+        <!-- Dashboard Content -->
+        <section class="p-8">
+
+            <h3 class="text-xl font-semibold mb-6">
+                Overview
+            </h3>
+
+            <!--stats-->
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+              
+              <div class="bg-card rounded-2xl p-6">
+
+    <div class="flex justify-between items-center">
+        <div class="text-3xl">🤖</div>
+        <span class="text-green-400 text-sm">+18%</span>
+    </div>
+
+    <p class="text-gray-400 mt-5">
+        AI Requests
+    </p>
+
+    <h2 class="text-5xl font-bold mt-2">
+        1.2K
+    </h2>
+
+    <p class="text-green-400 mt-4">
+       ▲ +12% this month
+    </p>
+
+
+</div>
+
+<!-- Projects -->
+<div class="bg-card rounded-2xl p-6 border border-slate-700 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 transition duration-300">
+
+    <div class="flex justify-between items-center">
+        <div class="text-3xl">📁</div>
+        <span class="text-green-400 text-sm">+7%</span>
+    </div>
+
+    <p class="text-gray-400 mt-5">
+        Projects
+    </p>
+
+    <h2 class="text-5xl font-bold mt-2">
+        250+
+    </h2>
+
+    <p class="text-green-400 mt-4">
+       ✔ Completed
+    </p>
+
+
+</div>
+
+<!-- Deployments -->
+<div class="bg-card rounded-2xl p-6 border border-slate-700 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 transition duration-300">
+
+    <div class="flex justify-between items-center">
+        <div class="text-3xl">🚀</div>
+        <span class="text-green-400 text-sm">+12%</span>
+    </div>
+
+    <p class="text-gray-400 mt-5">
+        Deployments
+    </p>
+
+    <h2 class="text-5xl font-bold mt-2">
+        96
+    </h2>
+
+    <p class="text-green-400 mt-4">
+       Deployment Success
+    </p>
+
+
+</div>
+
+<!-- Users -->
+<div class="bg-card rounded-2xl p-6 border border-slate-700 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/10 transition duration-300">
+
+    <div class="flex justify-between items-center">
+        <div class="text-3xl">👥</div>
+        <span class="text-green-400 text-sm">+24%</span>
+    </div>
+
+    <p class="text-gray-400 mt-5">
+        Active Users
+    </p>
+
+    <h2 class="text-5xl font-bold mt-2">
+        10K+
+    </h2>
+
+    <p class="text-green-400 mt-4">
+       Blockchain verified
+    </p>
+
+</div>
+
+<!-- Recent Activity -->
+
+<div class="xl:col-span-2">
+
+    <div class="flex justify-between items-center mb-6">
+
+        <h2 class="text-2xl font-bold">
+            Recent Activity
+        </h2>
+
+        <button class="text-blue-500 hover:text-blue-400">
+            View All →
+        </button>
+
+    </div>
+
+ <section>
+
+    <div class="space-y-4">
+
+        <!-- Item -->
+
+        <div class="bg-card rounded-xl p-5 flex justify-between items-center border border-slate-700 hover:border-blue-500 transition">
+
+            <div class="flex items-center gap-4">
+
+                <div class="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center text-xl">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h3 class="font-semibold">
+                        AI generated React component
+                    </h3>
+
+                    <p class="text-sm text-gray-400">
+                        2 minutes ago
+                    </p>
+
+                </div>
+
+            </div>
+
+            <span class="text-green-400">
+                Completed
+            </span>
+
+        </div>
+
+        <!-- Item -->
+
+        <div class="bg-card rounded-xl p-5 flex justify-between items-center border border-slate-700 hover:border-blue-500 transition">
+
+            <div class="flex items-center gap-4">
+
+                <div class="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center text-xl">
+                    ⛓️
+                </div>
+
+                <div>
+
+                    <h3 class="font-semibold">
+                        Smart Contract Verified
+                    </h3>
+
+                    <p class="text-sm text-gray-400">
+                        15 minutes ago
+                    </p>
+
+                </div>
+
+            </div>
+
+            <span class="text-green-400">
+                Success
+            </span>
+
+        </div>
+
+        <!-- Item -->
+
+        <div class="bg-card rounded-xl p-5 flex justify-between items-center border border-slate-700 hover:border-blue-500 transition">
+
+            <div class="flex items-center gap-4">
+
+                <div class="w-12 h-12 rounded-xl bg-green-600 flex items-center justify-center text-xl">
+                    ☁️
+                </div>
+
+                <div>
+
+                    <h3 class="font-semibold">
+                        Cloud Deployment Finished
+                    </h3>
+
+                    <p class="text-sm text-gray-400">
+                        1 hour ago
+                    </p>
+
+                </div>
+
+            </div>
+
+            <span class="text-blue-400">
+                Live
+            </span>
+
+        </div>
+
+<!-- =========================
+     Project Progress
+========================= -->
+
+<div class="mt-10">
+
+    <h2 class="text-3xl font-bold mb-6">
+        Project Progress
+    </h2>
+
+    <div class="bg-card rounded-2xl p-8 border border-slate-700">
+
+        <!-- AI Module -->
+        <div class="mb-6">
+
+            <div class="flex justify-between mb-2">
+
+                <span>🤖 AI Module</span>
+
+                <span class="text-blue-400">90%</span>
+
+            </div>
+
+            <div class="w-full bg-slate-700 h-3 rounded-full">
+
+                <div class="bg-blue-500 h-3 rounded-full w-[90%]"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Blockchain -->
+
+        <div class="mb-6">
+
+            <div class="flex justify-between mb-2">
+
+                <span>⛓ Blockchain Integration</span>
+
+                <span class="text-purple-400">82%</span>
+
+            </div>
+
+            <div class="w-full bg-slate-700 h-3 rounded-full">
+
+                <div class="bg-purple-500 h-3 rounded-full w-[82%]"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Cloud -->
+
+        <div>
+
+            <div class="flex justify-between mb-2">
+
+                <span>☁ Cloud Deployment</span>
+
+                <span class="text-green-400">76%</span>
+
+            </div>
+
+            <div class="w-full bg-slate-700 h-3 rounded-full">
+
+                <div class="bg-green-500 h-3 rounded-full w-[76%]"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    </section>
+
+    </div>
+
+</div>
+
+
+            </div>
+
+<!-- =========================
+     Quick Actions
+========================= -->
+
+<div class="mt-10">
+
+    <h2 class="text-3xl font-bold mb-6">
+        Quick Actions
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Create Project -->
+        <button class="bg-card border border-slate-700 rounded-2xl p-6 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20 transition">
+
+            <div class="text-4xl mb-4">📁</div>
+
+            <h3 class="text-xl font-semibold">
+                New Project
+            </h3>
+
+            <p class="text-gray-400 mt-2 text-sm">
+                Start a new development project.
+            </p>
+
+        </button>
+
+        <!-- AI Studio -->
+        <button class="bg-card border border-slate-700 rounded-2xl p-6 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20 transition">
+
+            <div class="text-4xl mb-4">🤖</div>
+
+            <h3 class="text-xl font-semibold">
+                AI Studio
+            </h3>
+
+            <p class="text-gray-400 mt-2 text-sm">
+                Generate, explain, and debug code.
+            </p>
+
+        </button>
+
+        <!-- Deploy -->
+        <button class="bg-card border border-slate-700 rounded-2xl p-6 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20 transition">
+
+            <div class="text-4xl mb-4">🚀</div>
+
+            <h3 class="text-xl font-semibold">
+                Deploy App
+            </h3>
+
+            <p class="text-gray-400 mt-2 text-sm">
+                Deploy your application instantly.
+            </p>
+
+        </button>
+
+        <!-- Blockchain -->
+        <button class="bg-card border border-slate-700 rounded-2xl p-6 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/20 transition">
+
+            <div class="text-4xl mb-4">⛓️</div>
+
+            <h3 class="text-xl font-semibold">
+                Smart Contract
+            </h3>
+
+            <p class="text-gray-400 mt-2 text-sm">
+                Create and manage blockchain contracts.
+            </p>
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     Recent Projects
+========================= -->
+
+<div class="mt-10">
+
+    <div class="flex justify-between items-center mb-6">
+
+        <h2 class="text-3xl font-bold">
+            Recent Projects
+        </h2>
+
+        <a href="#" class="text-blue-400 hover:text-blue-300">
+            View All →
+        </a>
+
+    </div>
+
+    <div class="bg-card rounded-2xl border border-slate-700 overflow-hidden">
+
+        <!-- Project 1 -->
+        <div class="flex items-center justify-between p-6 border-b border-slate-700 hover:bg-slate-800 transition">
+
+            <div>
+
+                <h3 class="font-semibold text-lg">
+                    Nexus Platform
+                </h3>
+
+                <p class="text-gray-400 text-sm">
+                    AI + Blockchain Developer Platform
+                </p>
+
+            </div>
+
+            <span class="bg-green-500/20 text-green-400 px-4 py-1 rounded-full text-sm">
+                Live
+            </span>
+
+        </div>
+
+        <!-- Project 2 -->
+        <div class="flex items-center justify-between p-6 border-b border-slate-700 hover:bg-slate-800 transition">
+
+            <div>
+
+                <h3 class="font-semibold text-lg">
+                    AI Code Generator
+                </h3>
+
+                <p class="text-gray-400 text-sm">
+                    Generate code using AI
+                </p>
+
+            </div>
+
+            <span class="bg-yellow-500/20 text-yellow-400 px-4 py-1 rounded-full text-sm">
+                Development
+            </span>
+
+        </div>
+
+        <!-- Project 3 -->
+        <div class="flex items-center justify-between p-6 hover:bg-slate-800 transition">
+
+            <div>
+
+                <h3 class="font-semibold text-lg">
+                    Blockchain Explorer
+                </h3>
+
+                <p class="text-gray-400 text-sm">
+                    Web3 transaction explorer
+                </p>
+
+            </div>
+
+            <span class="bg-red-500/20 text-red-400 px-4 py-1 rounded-full text-sm">
+                Draft
+            </span>
+
+        </div>
+
+    </div>
+
+<!-- =========================
+     Developer Insights
+========================= -->
+
+<div class="mt-10">
+
+    <h2 class="text-3xl font-bold mb-6">
+        Developer Insights
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+        <!-- Commits -->
+        <div class="bg-card rounded-2xl border border-slate-700 p-6">
+
+            <p class="text-gray-400">Git Commits</p>
+
+            <h2 class="text-4xl font-bold mt-3">1,284</h2>
+
+            <p class="text-green-400 mt-2">↑ 12% this month</p>
+
+        </div>
+
+        <!-- AI Tokens -->
+        <div class="bg-card rounded-2xl border border-slate-700 p-6">
+
+            <p class="text-gray-400">AI Requests</p>
+
+            <h2 class="text-4xl font-bold mt-3">8,420</h2>
+
+            <p class="text-blue-400 mt-2">Used this month</p>
+
+        </div>
+
+        <!-- Deployments -->
+        <div class="bg-card rounded-2xl border border-slate-700 p-6">
+
+            <p class="text-gray-400">Deployments</p>
+
+            <h2 class="text-4xl font-bold mt-3">326</h2>
+
+            <p class="text-purple-400 mt-2">Successful</p>
+
+        </div>
+
+        <!-- Build Time -->
+        <div class="bg-card rounded-2xl border border-slate-700 p-6">
+
+            <p class="text-gray-400">Average Build Time</p>
+
+            <h2 class="text-4xl font-bold mt-3">24s</h2>
+
+            <p class="text-yellow-400 mt-2">Optimized</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     AI Studio Preview
+========================= -->
+
+<div class="mt-10">
+
+    <div class="flex justify-between items-center mb-6">
+
+        <h2 class="text-3xl font-bold">
+            AI Studio
+        </h2>
+
+        <button class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-lg transition">
+            Open AI Studio
+        </button>
+
+    </div>
+
+    <div class="bg-card rounded-2xl border border-slate-700 p-6">
+
+        <!-- AI Response -->
+        <div class="bg-slate-800 rounded-xl p-5 mb-6">
+
+            <p class="text-blue-400 font-semibold mb-2">
+                Nexus AI
+            </p>
+
+            <p class="text-gray-300">
+                Hello 👋 Joseph! I can generate code, explain algorithms,
+                debug errors, create smart contracts, review pull requests,
+                and help deploy your applications.
+            </p>
+
+        </div>
+
+        <!-- Prompt Box -->
+        <div class="flex gap-4">
+
+            <input
+                type="text"
+                placeholder="Ask Nexus AI anything..."
+                class="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-blue-500">
+
+            <button
+                class="bg-blue-600 hover:bg-blue-700 px-6 rounded-xl transition">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
