@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nexus AI Test</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <div class="max-w-5xl mx-auto px-6 py-10">
+
+        <!-- HEADER -->
+        <div class="mb-8">
+
+            <h1 class="text-4xl font-bold">
+                🤖 Nexus AI
+            </h1>
+
+            <p class="text-slate-400 mt-2">
+                AI Studio Test Environment
+            </p>
+
+        </div>
+
+
+        <!-- CHAT -->
+        <div
+            id="chat"
+            class="bg-slate-900 border border-slate-800 rounded-2xl p-6 min-h-[450px]">
+
+            <!-- Welcome message -->
+            <div class="flex gap-4">
+
+                <div
+                    class="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h3 class="font-semibold">
+                        Nexus AI
+                    </h3>
+
+                    <p class="text-slate-400 mt-1">
+                        Hello! I'm ready to help you build.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- INPUT -->
+        <div class="flex gap-3 mt-5">
+
+            <input
+                id="prompt"
+                type="text"
+                placeholder="Ask Nexus AI anything..."
+                class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-blue-500"
+            >
+
+            <button
+                onclick="sendPrompt()"
+                class="bg-blue-600 hover:bg-blue-700 px-7 py-4 rounded-xl font-semibold">
+
+                Send →
+
+            </button>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-5">
+
+            <button
+                onclick="quickPrompt('Create a Python login system')"
+                class="bg-slate-900 border border-slate-800 hover:border-blue-500 p-4 rounded-xl">
+
+                🐍 Python
+
+            </button>
+
+            <button
+                onclick="quickPrompt('Create a React login page')"
+                class="bg-slate-900 border border-slate-800 hover:border-blue-500 p-4 rounded-xl">
+
+                ⚛️ React
+
+            </button>
+
+            <button
+                onclick="quickPrompt('Debug my JavaScript')"
+                class="bg-slate-900 border border-slate-800 hover:border-blue-500 p-4 rounded-xl">
+
+                🐞 Debug
+
+            </button>
+
+            <button
+                onclick="quickPrompt('Explain Blockchain')"
+                class="bg-slate-900 border border-slate-800 hover:border-blue-500 p-4 rounded-xl">
+
+                ⛓️ Blockchain
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+<script>
+
+function escapeHTML(text) {
+
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+function addUserMessage(prompt) {
+
+    const chat = document.getElementById("chat");
+
+    const message = document.createElement("div");
+
+    message.className = "flex justify-end mt-6";
+
+    message.innerHTML = `
+        <div class="bg-blue-600 px-5 py-3 rounded-xl max-w-2xl">
+            ${escapeHTML(prompt)}
+        </div>
+    `;
+
+    chat.appendChild(message);
+
+    chat.scrollTop = chat.scrollHeight;
+
+}
+
+
+function addAIMessage(content) {
+
+    const chat = document.getElementById("chat");
+
+    const message = document.createElement("div");
+
+    message.className = "flex gap-4 mt-6";
+
+    message.innerHTML = `
+        <div
+            class="w-11 h-11 bg-blue-600 rounded-xl flex items-center justify-center shrink-0">
+
+            🤖
+
+        </div>
+
+        <div class="bg-slate-800 rounded-xl p-5 max-w-3xl">
+
+            <h3 class="font-semibold mb-3">
+                Nexus AI
+            </h3>
+
+            ${content}
+
+        </div>
+    `;
+
+    chat.appendChild(message);
+
+    chat.scrollTop = chat.scrollHeight;
+
+}
+
+
+function generateResponse(prompt) {
+
+    const text = prompt.toLowerCase();
+
+
+    // PYTHON
+    if (
+        text.includes("python") ||
+        text.includes("login system")
+    ) {
+
+        return `
+            <p class="text-slate-300 mb-4">
+                Here's a simple Python login system:
+            </p>
+
+            <pre class="bg-black p-4 rounded-xl overflow-x-auto text-green-400 text-sm"><code>username = input("Enter username: ")
+password = input("Enter password: ")
+
+if username == "admin" and password == "1234":
+    print("Login successful!")
+else:
+    print("Invalid username or password.")</code></pre>
+
+            <button
+                onclick="copyCode(this)"
+                class="mt-3 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm">
+
+                📋 Copy Code
+
+            </button>
+        `;
+
+    }
+
+
+    // REACT
+    if (text.includes("react")) {
+
+        return `
+            <p class="text-slate-300 mb-4">
+                Here's a basic React login component:
+            </p>
+
+            <pre class="bg-black p-4 rounded-xl overflow-x-auto text-green-400 text-sm"><code>function Login() {
+
+    return (
+        &lt;div&gt;
+
+            &lt;h2&gt;Login&lt;/h2&gt;
+
+            &lt;input
+                type="text"
+                placeholder="Username"
+            /&gt;
+
+            &lt;input
+                type="password"
+                placeholder="Password"
+            /&gt;
+
+            &lt;button&gt;
+                Login
+            &lt;/button&gt;
+
+        &lt;/div&gt;
+    );
+
+}
+
+export default Login;</code></pre>
+
+            <button
+                onclick="copyCode(this)"
+                class="mt-3 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm">
+
+                📋 Copy Code
+
+            </button>
+        `;
+
+    }
+
+
+    // DEBUG
+    if (
+        text.includes("debug") ||
+        text.includes("error")
+    ) {
+
+        return `
+            <p class="text-slate-300">
+                🐞 Nexus Debug Assistant is ready.
+            </p>
+
+            <p class="text-slate-400 mt-2">
+                Paste your code and error message and Nexus
+                will analyze the problem.
+            </p>
+        `;
+
+    }
+
+
+    // BLOCKCHAIN
+    if (
+        text.includes("blockchain") ||
+        text.includes("web3")
+    ) {
+
+        return `
+            <p class="text-slate-300">
+                ⛓️ Blockchain is a distributed ledger technology
+                where transactions are recorded across a network.
+            </p>
+
+            <p class="text-slate-400 mt-3">
+                Nexus can help you explore Web3, smart contracts,
+                wallets and decentralized applications.
+            </p>
+        `;
+
+    }
+
+
+    // DEFAULT
+    return `
+        <p class="text-slate-300">
+            👋 I received your request:
+        </p>
+
+        <p class="text-blue-400 mt-2">
+            "${escapeHTML(prompt)}"
+        </p>
+
+        <p class="text-slate-400 mt-3">
+            Try asking Nexus to create Python, React,
+            debug JavaScript, or explain Blockchain.
+        </p>
+    `;
+
+}
+
+
+function sendPrompt() {
+
+    const input = document.getElementById("prompt");
+
+    const prompt = input.value.trim();
+
+    if (!prompt) {
+        return;
+    }
+
+    addUserMessage(prompt);
+
+    input.value = "";
+
+
+    // Typing indicator
+
+    const chat = document.getElementById("chat");
+
+    const typing = document.createElement("div");
+
+    typing.id = "typing";
+
+    typing.className = "text-slate-500 mt-5";
+
+    typing.innerHTML = "🤖 Nexus AI is thinking...";
+
+    chat.appendChild(typing);
+
+
+    setTimeout(() => {
+
+        typing.remove();
+
+        addAIMessage(
+            generateResponse(prompt)
+        );
+
+    }, 900);
+
+}
+
+
+function quickPrompt(prompt) {
+
+    document.getElementById("prompt").value = prompt;
+
+    sendPrompt();
+
+}
+
+
+function copyCode(button) {
+
+    const code =
+        button.previousElementSibling.innerText;
+
+    navigator.clipboard.writeText(code);
+
+    button.innerText = "✅ Copied!";
+
+    setTimeout(() => {
+
+        button.innerText = "📋 Copy Code";
+
+    }, 2000);
+
+}
+
+
+document
+    .getElementById("prompt")
+    .addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+
+            sendPrompt();
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
