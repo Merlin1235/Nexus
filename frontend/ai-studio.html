@@ -616,7 +616,93 @@ tailwind.config = {
 </div>
 </body>
 <script>
+<script>
+function nexusEscape(text) {
+    return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
 
+function nexusGenerate(prompt) {
+    const text = prompt.toLowerCase();
+
+    if (text.includes("python") || text.includes("login")) {
+        return `
+            <p>Here's a Python login system:</p>
+
+            <pre><code>username = input("Enter username: ")
+password = input("Enter password: ")
+
+if username == "admin" and password == "1234":
+    print("Login successful!")
+else:
+    print("Invalid username or password.")</code></pre>
+
+            <button onclick="nexusCopy(this)">
+                📋 Copy Code
+            </button>
+        `;
+    }
+
+    if (text.includes("react")) {
+        return `
+            <p>Here's a basic React login component:</p>
+
+            <pre><code>function Login() {
+    return (
+        &lt;div&gt;
+            &lt;h2&gt;Login&lt;/h2&gt;
+            &lt;input type="text" placeholder="Username" /&gt;
+            &lt;input type="password" placeholder="Password" /&gt;
+            &lt;button&gt;Login&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+
+export default Login;</code></pre>
+
+            <button onclick="nexusCopy(this)">
+                📋 Copy Code
+            </button>
+        `;
+    }
+
+    if (text.includes("debug") || text.includes("error")) {
+        return `
+            <p>🐞 <strong>Nexus Debug Assistant</strong></p>
+            <p>Paste your code and error message and I'll help identify the problem.</p>
+        `;
+    }
+
+    if (text.includes("blockchain") || text.includes("web3")) {
+        return `
+            <p>⛓️ <strong>Nexus Blockchain Assistant</strong></p>
+            <p>Blockchain is a distributed ledger technology used to record transactions across a network.</p>
+        `;
+    }
+
+    return `
+        <p>👋 I received your request:</p>
+        <p><strong>${nexusEscape(prompt)}</strong></p>
+        <p>Try asking me to create Python, React, debug JavaScript, or explain Blockchain.</p>
+    `;
+}
+
+function nexusCopy(button) {
+    const code = button.previousElementSibling.innerText;
+
+    navigator.clipboard.writeText(code);
+
+    button.innerText = "✅ Copied!";
+
+    setTimeout(() => {
+        button.innerText = "📋 Copy Code";
+    }, 2000);
+}
+</script>
 function escapeHTML(text) {
     return text
         .replace(/&/g, "&amp;")
